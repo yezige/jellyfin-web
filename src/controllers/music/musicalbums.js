@@ -192,6 +192,7 @@ export default function (view, params, tabContent) {
             });
             Events.on(filterDialog, 'filterchange', function () {
                 getQuery().StartIndex = 0;
+                libraryBrowser.saveQueryValues(getSavedQueryKey(), getQuery());
                 reloadItems();
             });
 

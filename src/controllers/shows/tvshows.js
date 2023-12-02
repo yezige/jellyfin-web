@@ -202,7 +202,8 @@ export default function (view, params, tabContent) {
                 serverId: ApiClient.serverId()
             });
             Events.on(filterDialog, 'filterchange', function () {
-                getQuery().StartIndex = 0;
+                getQuery(tabContent).StartIndex = 0;
+                libraryBrowser.saveQueryValues(getSavedQueryKey(tabContent), getQuery(tabContent));
                 reloadItems(tabContent);
             });
             filterDialog.show();

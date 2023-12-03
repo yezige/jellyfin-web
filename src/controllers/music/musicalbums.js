@@ -198,6 +198,7 @@ import '../../elements/emby-itemscontainer/emby-itemscontainer';
                 });
                 Events.on(filterDialog, 'filterchange', function () {
                     getQuery().StartIndex = 0;
+                    libraryBrowser.saveQueryValues(getSavedQueryKey(), getQuery());
                     reloadItems();
                 });
 

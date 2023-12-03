@@ -281,6 +281,7 @@ import '../../elements/emby-itemscontainer/emby-itemscontainer';
                 });
                 Events.on(filterDialog, 'filterchange', () => {
                     query.StartIndex = 0;
+                    userSettings.saveQuerySettings(savedQueryKey, query);
                     itemsContainer.refreshItems();
                 });
                 filterDialog.show();

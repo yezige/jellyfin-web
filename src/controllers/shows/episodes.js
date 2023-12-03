@@ -179,6 +179,7 @@ import Dashboard from '../../scripts/clientUtils';
                     serverId: ApiClient.serverId()
                 });
                 Events.on(filterDialog, 'filterchange', function () {
+                    libraryBrowser.saveQueryValues(getSavedQueryKey(tabContent), getQuery(tabContent));
                     reloadItems(tabContent);
                 });
                 filterDialog.show();

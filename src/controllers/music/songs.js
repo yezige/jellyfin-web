@@ -140,6 +140,7 @@ import Dashboard from '../../scripts/clientUtils';
                 });
                 Events.on(filterDialog, 'filterchange', function () {
                     getQuery(tabContent).StartIndex = 0;
+                    libraryBrowser.saveQueryValues(getSavedQueryKey(tabContent), getQuery(tabContent));
                     reloadItems(tabContent);
                 });
                 filterDialog.show();

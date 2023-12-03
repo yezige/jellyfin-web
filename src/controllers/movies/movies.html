@@ -4,7 +4,14 @@
         <div class="flex align-items-center justify-content-center flex-wrap-wrap padded-top padded-left padded-right padded-bottom focuscontainer-x">
             <div class="paging"></div>
             <button is="paper-icon-button-light" class="btnSelectView autoSize" title="${ButtonSelectView}"><span class="material-icons view_comfy" aria-hidden="true"></span></button>
+            <button is="emby-button" class="btnSort hide button-flat listTextButton-autohide">
+                <span class="btnSortText"></span>
+                <span class="material-icons btnSortIcon arrow_upward" aria-hidden="true"></span>
+            </button>
             <button is="paper-icon-button-light" class="btnSort autoSize" title="${Sort}"><span class="material-icons sort_by_alpha" aria-hidden="true"></span></button>
+            <button is="emby-button" class="btnFilter button-flat listTextButton-autohide">
+                <span>${Filter}</span>
+            </button>
             <button is="paper-icon-button-light" class="btnFilter autoSize" title="${Filter}"><span class="material-icons filter_list" aria-hidden="true"></span></button>
         </div>
 
